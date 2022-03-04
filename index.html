@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Giphy Party!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="form-group text-center bg-dark">
+      <h1 class="h1 text-white">GIPHY PARTY</h1>
+      <form class="form-inline justify-content-center">
+        <input
+          type="search"
+          class="form-conrtol rounded m-1"
+          id="searchItem"
+          placeholder="Enter Search Item"
+        />
+        <button class="btn btn-secondary m-1" id="search" type="submit">
+          Search Giphy!
+        </button>
+        <button class="btn btn-danger m-1" id="remove">Remove Images</button>
+      </form>
+    </div>
+    <div id="gif-Area" class="row">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
