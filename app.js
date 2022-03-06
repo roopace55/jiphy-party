@@ -33,9 +33,6 @@ function addGif(res) {
     $newCol.append($newGif);
     $gifArea.append($newCol);
   }
-  //   var list = document.querySelector("#ul");
-  //   var li = document.createElement("li");
-  //   list.appendChild(li);
 }
 
 function removeGif() {
