@@ -1,4 +1,6 @@
 # jiphy-party
-This app is supposed to look for Gifs and show up in the DOM.
-I believe it is retreiving the data from the site but I struggle to show them up in my DOM.
-NOTE: The jQuery lines are copied from the Solutions and the comments are my initial codes.
+You can enter any keyword and on the input box and you will get a random Gif.
+Click on Remove Images to remove all Gifs from the screen.
+Finally learned to pull objects from APIs and show them in DOM. 
+
+*MISSION ACCOMPLISHED
