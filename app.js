@@ -1,7 +1,7 @@
 console.log("Let's get this party started!");
 
 const search = document.querySelector("#search");
-const searchItem = document.getElementById("searchItem").value;
+const searchItem = document.getElementById("searchItem");
 const $gifArea = $("#gif-area");
 
 async function searchGif(searchItem) {
@@ -9,19 +9,25 @@ async function searchGif(searchItem) {
     `http://api.giphy.com/v1/gifs/search?q=${searchItem}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
   );
   console.log(res);
+  return res;
 }
 
-search.addEventListener("click", function (e) {
+search.addEventListener("click", async function (e) {
   e.preventDefault();
-  searchGif();
+  const res = await searchGif(searchItem.value);
+  addGif(res);
 });
 
 function addGif(res) {
-  let numResults = res.data.length;
+  console.log(res.data.data);
+  let numResults = res.data.data.length;
+  console.log(numResults);
+
   if (numResults) {
     let randomIdx = Math.floor(Math.random() * numResults);
+    let $newCol = $("<div>", { class: "col-md-4 col-12 mb-4" });
     let $newGif = $("<img>", {
-      src: res.data[randomIdx].images.original.url,
+      src: res.data.data[randomIdx].images.original.url,
       class: "w-100",
     });
     $newCol.append($newGif);
