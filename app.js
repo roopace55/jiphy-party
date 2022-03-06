@@ -6,7 +6,7 @@ const $gifArea = $("#gif-area");
 
 async function searchGif(searchItem) {
   let res = await axios.get(
-    `http://api.giphy.com/v1/gifs/search?q=${searchItem}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
+    `https://api.giphy.com/v1/gifs/search?q=${searchItem}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
   );
   console.log(res);
   return res;
